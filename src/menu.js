@@ -1,26 +1,25 @@
-export function MenuItem(item, description, price){
-    this.item = item;
-    this.description = description;
-    this.price = price
+export function menuItem(){
+    const container = document.querySelector('.container');
+    container.innerHTML = '';
 
-    const displayItems = () => {
-        const container = document.querySelector('.container');
+    const displayItems = function(item, description, price){
+       
         const menuContainer = document.createElement('UL');
         menuContainer.classList.add('menu');
-
+        
         const menuItem = document.createElement('LI');
         const itemDesc = document.createElement('LI');
         const itemPrice = document.createElement('LI');
 
-        menuItem.textContent = this.item;
-        itemDesc.textContent = this.description;
-        itemPrice.textContent = this.price;
+        menuItem.textContent = item;
+        itemDesc.textContent = description;
+        itemPrice.textContent = price;
 
-        container.appendChild(menuContainer);
-        menuContainer.appendChild(menuItem);
-        menuContainer.appendChild(itemDesc);
-        menuContainer.appendChild(itemPrice);
-
+        menuContainer.append(menuItem);
+        menuContainer.append(itemDesc);
+        menuContainer.append(itemPrice);
+        container.append(menuContainer);
     }
-    displayItems();
+    const friedChicken1 = displayItems("Fried Chicken", "Crispy and juicy, fried until golden brown. Comes in dark or white meat and 2 sides.", "$10.99");
+    const friedChicken3 = displayItems("Fried Chicken", "Crispy and juicy, fried until golden brown. Comes in dark or white meat and 2 sides.", "$10.99");
 }

@@ -8,6 +8,7 @@ module.exports = {
         index : "./src/index.js",
         menu : "./src/menu.js",
         contact : "./src/contact.js",
+        about : "./src/about.js",
     },
     output: {
         filename : "[name].main.js",

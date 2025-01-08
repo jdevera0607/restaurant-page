@@ -8,7 +8,9 @@
 
 // console.log("Hello World!");
 import "./styles.css";
-import { MenuItem } from "./menu";
+import { menuItem } from "./menu";
+import { homeItem } from "./home";
+import { contactItem } from "./contact";
 
 const home = document.querySelector('.home');
 const menu = document.querySelector('.menu');
@@ -21,13 +23,13 @@ contact.textContent = "Contact Us";
 about.textContent = "About us";
 
 function homeTab(){
-
+    homeItem();
 }
 function menuTab(){
-    const friedChicken = new MenuItem("Fried Chicken", "Crispy and juicy, fried until golden brown. Comes in dark or white meat and 2 sides.", "$10.99");
+    menuItem();
 }
 function contactTab(){
-
+    contactItem();
 }
 function aboutTab(){
 
@@ -48,10 +50,15 @@ function aboutTab(){
 // }
 
 
-
-// home.addEventListener(click, homeTab());
+homeTab();
+home.addEventListener('click', () => {
+    homeTab();
+});
 menu.addEventListener('click',() => {
     menuTab();
+});
+contact.addEventListener('click',() => {
+    contactTab();
 });
 // contact.addEventListener(click, contactTab());
 // about.addEventListener(click, aboutTab());
