@@ -4,16 +4,22 @@ body{
     display: grid;
     justify-content: center;
     align-items: center;
-    text-align: center;
+ 
 }
 #content{
     width: 720px;
     background-color: lightgray;
-    border-radius: 10px ;
+    border-radius: 10px;
+}
+.container{
+    padding: 15px;
 }
 .nav-bar{
     display:grid;
     grid-template-columns: repeat(4, 1fr);
     justify-content: center;
     align-items: center;
+}
+ul{
+    list-style-type: none;
 }

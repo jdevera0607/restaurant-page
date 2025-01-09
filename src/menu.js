@@ -21,5 +21,5 @@ export function menuItem(){
         container.append(menuContainer);
     }
     const friedChicken1 = displayItems("Fried Chicken", "Crispy and juicy, fried until golden brown. Comes in dark or white meat and 2 sides.", "$10.99");
-    const friedChicken3 = displayItems("Fried Chicken", "Crispy and juicy, fried until golden brown. Comes in dark or white meat and 2 sides.", "$10.99");
+    const friedChicken3 = displayItems("Chicken Bulgogi", "Korean BBQ, made with Gochujang. Comes with a side of rice. ", "$11.99");
 }

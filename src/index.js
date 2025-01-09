@@ -11,16 +11,35 @@ import "./styles.css";
 import { menuItem } from "./menu";
 import { homeItem } from "./home";
 import { contactItem } from "./contact";
+import { aboutItem } from "./about";
 
-const home = document.querySelector('.home');
-const menu = document.querySelector('.menu');
-const contact = document.querySelector('.contact');
-const about = document.querySelector('.about');
+const nav = document.querySelector('.nav-bar');
+
+const home = document.createElement('button');
+home.classList.add('home-btn')
+home.textContent = 'Home';
+
+const menu = document.createElement('button');
+menu.classList.add('menu-btn')
+menu.textContent = 'Menu';
+
+const contact = document.createElement('button');
+contact.classList.add('contact-btn')
+contact.textContent = 'Contact Us';
+
+const about = document.createElement('button');
+about.classList.add('about-btn')
+about.textContent = 'About us';
 
 home.textContent = "Home";
 menu.textContent = "Menu";
 contact.textContent = "Contact Us";
 about.textContent = "About us";
+
+nav.append(home);
+nav.append(menu);
+nav.append(contact);
+nav.append(about);
 
 function homeTab(){
     homeItem();
@@ -32,8 +51,10 @@ function contactTab(){
     contactItem();
 }
 function aboutTab(){
-
+    aboutItem();
 }
+//I want to leave this commented out code for a future reference about async.
+
 // async function getHome(){
 //     const hello = document.createElement('h2');
 //     hello.textContent = "Hello World!";
@@ -49,7 +70,6 @@ function aboutTab(){
 //     return hi;
 // }
 
-
 homeTab();
 home.addEventListener('click', () => {
     homeTab();
@@ -60,5 +80,7 @@ menu.addEventListener('click',() => {
 contact.addEventListener('click',() => {
     contactTab();
 });
-// contact.addEventListener(click, contactTab());
-// about.addEventListener(click, aboutTab());
+about.addEventListener('click',() => {
+    aboutTab();
+});
+
